@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Info App</title>
+  <link rel="stylesheet" href="temp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">MedInfo</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="app.html">Search Medicine</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="search-box">
+      <input type="text" id="medicineInput" placeholder="Enter medicine name...">
+      <button id="searchButton">Search</button>
+    </div>
+    <p id="error" class="error"></p>
+    
+    <div id="medicineInfo" class="card hidden">
+      <h2 id="medicineName"></h2>
+      <p><strong>Generic Name:</strong> <span id="genericName"></span></p>
+      <p><strong>Indications:</strong> <span id="indications"></span></p>
+      <p><strong>Side Effects:</strong> <span id="sideEffects"></span></p>
+      <p><strong>Warnings:</strong> <span id="warnings"></span></p>
+      <div class="buttons">
+        <button id="savePdfButton">Save as PDF</button>
+        <button id="favoriteButton">Add to Favorites</button>
+        <button id="shareButton">Share Info</button>
+      </div>
+    </div>
+    
+    <section class="history-section">
+      <h3>Favorites</h3>
+      <ul id="favoritesList"></ul>
+    </section>
+    
+    <section class="history-section">
+      <h3>Search History</h3>
+      <ul id="historyList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MedInfo. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
